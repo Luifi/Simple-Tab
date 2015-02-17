@@ -1,6 +1,6 @@
 /* BASE */
 body {
-  background: #008fd9;
+  background: #CA3C25;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
@@ -10,13 +10,14 @@ h1, h2, p, a {
   text-align: center; }
 
 h1 {
+  margin: 40px 0 0 0;
   font-weight: 700;
   font-size: 4.5em;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15); }
 
 h2 {
   font-size: 1.75em;
-  color: #046da4; }
+  color: rgba(0, 0, 0, 0.3); }
 
 p {
   font-size: 1em;
@@ -40,7 +41,7 @@ p {
 nav .navtab__item a, nav .navtab__item--active a {
   padding: 1.25em 3em;
   background: rgba(40, 44, 42, 0.05);
-  color: #046da4;
+  color: rgba(0, 0, 0, 0.3);
   line-height: 1;
   display: block;
   -webkit-transition: color 0.2s;
@@ -57,23 +58,20 @@ nav .navtab__item {
     border-right: none; } }
 nav .navtab__item--active {
   border-bottom: none;
-  border-top: 1px solid #046da4; }
+  border-top: 1px solid rgba(0, 0, 0, 0.3); }
 nav .navtab__item--active a {
   background: none;
-  box-shadow: inset 0 3px 0 #046da4;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.3);
   color: #fff; }
 
 .tab-content article {
   display: none; }
 
 /* FOOTER */
-footer {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: auto; }
 footer a {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  display: block; }
+  display: block;
+  margin-top: 40px; }
+footer a:hover {
+  color: white; }

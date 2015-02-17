@@ -1,3 +1,4 @@
+/* BASE */
 body {
   background: #008fd9;
   margin: 0;
@@ -7,7 +8,8 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 2em; }
+  font-size: 2em;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15); }
 
 h2 {
   font-size: 1.75em;
@@ -17,6 +19,7 @@ p {
   font-size: 0.8em;
   font-weight: 200; }
 
+/* SECTION TABS */
 #tabs {
   display: block;
   position: relative;
@@ -27,27 +30,33 @@ p {
   font-weight: 300;
   font-size: 1.25em;
   text-align: center; }
-  #tabs nav ul {
-    list-style: none; }
-    #tabs nav ul li {
-      display: inline-block;
-      border: 1px solid rgba(40, 44, 42, 0.1);
-      margin: 0 0 0 -5px; }
-      #tabs nav ul li:not(:last-child) {
-        border-right: none; }
-      #tabs nav ul li.active {
-        border-bottom: none;
-        border-top: 1px solid #046da4; }
-        #tabs nav ul li.active a {
-          background: none;
-          box-shadow: inset 0 3px 0 #046da4;
-          color: #fff; }
-      #tabs nav ul li a {
-        padding: 1.25em 3em;
-        background: rgba(40, 44, 42, 0.05);
-        color: #046da4;
-        line-height: 1;
-        display: block;
-        -webkit-transition: color 0.2s;
-        transition: color 0.2s;
-        text-decoration: none; }
+
+nav .navtab__item, nav .navtab__item--active {
+  display: inline-block;
+  margin: 0 0 0 -5px; }
+nav .navtab__item a, nav .navtab__item--active a {
+  padding: 1.25em 3em;
+  background: rgba(40, 44, 42, 0.05);
+  color: #046da4;
+  line-height: 1;
+  display: block;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none; }
+
+nav .navtab {
+  list-style: none; }
+nav .navtab__item {
+  border: 1px solid rgba(40, 44, 42, 0.1); }
+nav .navtab__item:not(:last-child) {
+  border-right: none; }
+nav .navtab__item--active {
+  border-bottom: none !important;
+  border-top: 1px solid #046da4; }
+nav .navtab__item--active a {
+  background: none;
+  box-shadow: inset 0 3px 0 #046da4;
+  color: #fff; }
+
+.tab-content article {
+  display: none; }

@@ -28,17 +28,15 @@ $(document).ready(function(){
     
 //CAMINO 2  
     
-    //Ocultar todos los tabs
-    $('.tab-content article').hide();
     //Mostrar el contenido del primer tab
     $('.tab-content article:first-child').show();
     
     $('#tabs nav ul li a').on('click', function(e){
         e.preventDefault();
         //Remover la clase active de todos los ancor
-        $(this).parent().siblings().removeClass('active');
+        $(this).parent().siblings().removeClass('navtab__item--active');
         //Agregar la clase active al ancor que le hacemos click
-        $(this).parent().addClass('active');
+        $(this).parent().addClass('navtab__item--active');
                 
         //Obtener el tab a mostrar
         var tabShow = $(this).attr('href');

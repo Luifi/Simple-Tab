@@ -8,9 +8,13 @@ body {
     color: #fff;
 }
 
-h1{
+h1, h2, p, a {
+    text-align: center;
+}
+
+h1 {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 4.5em;
     text-shadow: 4px 4px 0 rgba(0,0,0,.15);
 }
 
@@ -20,7 +24,7 @@ h2 {
 }
 
 p {
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 200;
 }
 
@@ -31,9 +35,8 @@ p {
     display: block;
     position: relative;
     overflow: hidden;
-    margin: 5% auto 0;
+    margin: 2% auto 0;
     max-width: 1200px;
-    min-width: 980px;
     font-weight: 300;
     font-size: 1.25em;
     text-align: center;
@@ -42,8 +45,11 @@ p {
 // Nav Tabs
 
 %item {
-    display: inline-block;
-    margin: 0 0 0 -5px;
+
+    @media screen and (min-width:980px) {
+        display: inline-block;
+        margin: 0 0 0 -5px;    
+    }
 
     a {
         padding: 1.25em 3em;
@@ -61,19 +67,22 @@ nav {
 
     .navtab {
         list-style: none; 
+        padding: 0 1em;
         
         &__item {
             @extend %item;
             border: 1px solid rgba(40,44,42,0.1);
-            
-            
-            &:not(:last-child) {
-                border-right: none;
+
+            @media screen and (min-width:980px){
+                &:not(:last-child) {
+                    border-right: none;
+                }
             }
+
             
             &--active{
                 @extend %item;
-                border-bottom: none !important;
+                border-bottom: none;
                 border-top: 1px solid #046da4;
 
                 a {
@@ -94,6 +103,21 @@ nav {
 
     article {
         display: none;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    a {
+        color: rgba(0,0,0,.3);
+        text-decoration: none;
+        display: block;
     }
 }
 

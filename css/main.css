@@ -6,9 +6,12 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #fff; }
 
+h1, h2, p, a {
+  text-align: center; }
+
 h1 {
   font-weight: 700;
-  font-size: 2em;
+  font-size: 4.5em;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15); }
 
 h2 {
@@ -16,7 +19,7 @@ h2 {
   color: #046da4; }
 
 p {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 200; }
 
 /* SECTION TABS */
@@ -24,16 +27,16 @@ p {
   display: block;
   position: relative;
   overflow: hidden;
-  margin: 5% auto 0;
+  margin: 2% auto 0;
   max-width: 1200px;
-  min-width: 980px;
   font-weight: 300;
   font-size: 1.25em;
   text-align: center; }
 
-nav .navtab__item, nav .navtab__item--active {
-  display: inline-block;
-  margin: 0 0 0 -5px; }
+@media screen and (min-width: 980px) {
+  nav .navtab__item, nav .navtab__item--active {
+    display: inline-block;
+    margin: 0 0 0 -5px; } }
 nav .navtab__item a, nav .navtab__item--active a {
   padding: 1.25em 3em;
   background: rgba(40, 44, 42, 0.05);
@@ -45,13 +48,15 @@ nav .navtab__item a, nav .navtab__item--active a {
   text-decoration: none; }
 
 nav .navtab {
-  list-style: none; }
+  list-style: none;
+  padding: 0 1em; }
 nav .navtab__item {
   border: 1px solid rgba(40, 44, 42, 0.1); }
-nav .navtab__item:not(:last-child) {
-  border-right: none; }
+@media screen and (min-width: 980px) {
+  nav .navtab__item:not(:last-child) {
+    border-right: none; } }
 nav .navtab__item--active {
-  border-bottom: none !important;
+  border-bottom: none;
   border-top: 1px solid #046da4; }
 nav .navtab__item--active a {
   background: none;
@@ -60,3 +65,15 @@ nav .navtab__item--active a {
 
 .tab-content article {
   display: none; }
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: auto; }
+footer a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  display: block; }
